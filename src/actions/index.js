@@ -1,4 +1,4 @@
 // Coloque aqui suas actions
-const login = (state) => ({ type: 'EMAIL', state });
+const login = (name) => ({ type: 'EMAIL', payload: name });
 
 export default login;
