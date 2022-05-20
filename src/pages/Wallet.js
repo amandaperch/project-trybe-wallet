@@ -1,21 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { apiEconomia } from '../actions';
 
 class Wallet extends React.Component {
+  componentDidMount() {
+    const { setApiEconomia } = this.props;
+    setApiEconomia();
+  }
+
   render() {
     const { email } = this.props;
     return (
       <header>
-        <h2 data-testid="email-field">
+        <h3 data-testid="email-field">
           {email}
-        </h2>
-        <h2 data-testid="total-field">
+        </h3>
+        <h3 data-testid="total-field">
           0
-        </h2>
-        <h2 data-testid="header-currency-field">
+        </h3>
+        <h3 data-testid="header-currency-field">
           BRL
-        </h2>
+        </h3>
       </header>
     );
   }
@@ -25,8 +31,15 @@ const mapStateToProps = (state) => ({
   email: state.user.email,
 });
 
-export default connect(mapStateToProps)(Wallet);
+const mapDispatchToProps = (dispatch) => ({
+  setApiEconomia: () => {
+    dispatch(apiEconomia());
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
 
 Wallet.propTypes = {
   email: PropTypes.string.isRequired,
+  setApiEconomia: PropTypes.func.isRequired,
 };
