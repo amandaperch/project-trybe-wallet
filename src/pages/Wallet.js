@@ -183,7 +183,7 @@ class Wallet extends React.Component {
                 <td>{ expense.exchangeRates[expense.currency].name }</td>
                 <td> Real </td>
                 <td><button type="button">Adicionar</button></td>
-                <td><button type="button">Excluir</button></td>
+                <td><button data-testid="delete-btn" type="button">Excluir</button></td>
               </tr>
             ))}
           </table>
