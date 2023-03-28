@@ -17,16 +17,14 @@
 
 Os arquivos com códigos feitos por mim são dos seguintes:
 <p>
-  SRC/calculateEntry.js<br />
-  SRC/countAnimals.js<br />
-  SRC/getAnimalMap.js<br />
-  SRC/getAnimalsOlderThan.js<br />
-  SRC/getEmployeeByName.js<br />
-  SRC/getEmployeesCoverage.js<br />
-  SRC/getOldestFromFirstSpecies.js<br />
-  SRC/getRelatedEmployees.js<br />
-  SRC/getSchedule.js<br />
-  SRC/getSpeciesByIds.js<br />
+  SRC/Actios/index.js<br />
+  SRC/Pages/Login.js<br />
+  SRC/Pages/Wallet.js<br />
+  SRC/Reducers/index.js<br />
+  SRC/Reducers/user.js<br />
+  SRC/Reducers/wallet.js<br />
+  SRC/Store/index.js<br />
+  App.js<br />
  </p>
 
 ---
@@ -34,40 +32,33 @@ Os arquivos com códigos feitos por mim são dos seguintes:
 
 - Neste Projeto eu obtive 80% de aprovação realizado os seguintes requisitos:
 <p>  
-  [x] Function getSpeciesByIds;<br />
-      Esta função é responsável pela busca das espécies de animais por id. Ela retorna um array contendo as espécies referentes aos ids passados como parâmetro, podendo receber um ou mais ids.
+  [x] Pagina Inicial;<br />
+      Pagina inicial para que a pessoa usuária insira seu email e senha, um botão com texto entrar, sempre verificando se o email e senha são validos. Esta pagina deve estar em "/".
       
-  [x] Function getAnimalsOlderThan;<br />
-      Esta função, a partir do nome de uma espécie e uma idade mínima, verifica se todos os animais daquela espécie possuem a idade mínima especificada.
+  [x] Pagina Carteira;<br />
+      A rota da pagina deve ser "/carteira"
       
-  [x] Function getEmployeeByName;<br />
-      Esta função é responsável pela busca das pessoas colaboradoras através do primeiro ou do último nome delas
+  [x] Criar um header;<br />
+      Deve conter o email da pessoa usuária, um elemento com a despesa total da lista de gastos e um elemento câmbio com a moeda que esta sendo utilizada.
       
-  [x] Function getRelatedEmployees;<br />
-      Dividida em duas partes, esta função deve retornar se a pessoa colaboradora é gerente ou não, caso sim deverá mostrar as pessoas que são gerenciadas por ela, caso não deve ser lançado um erro padrão do JavaScript com a mensagem "O id inserido não é de uma pessoa colaboradora gerente!".
+  [x] API de câmbio;<br />
+      Armazenar no estado global as siglas das moedas que vêm da API, aplicando a mesma em uma array.
       
-  [x] Function countAnimals;<br />
-      Esta função é responsável por contabilizar a quantidade de animais de cada espécie.
+  [x] Formulário;<br />
+      Para adicionar as despesas com as seguintes características: Valor da despesa, descrição da despesa, em qual moeda será registrada a despesa, método de pagamento, e motivo da despesa (ex: alimentação, lazer e etc).
       
-  [x] Function calculateEntry;<br />
-      Esta função deve trazer a faixa etária dos visitantes do zoo, sendo menor de 18: crianças, maior ou igual a 18 e menor que 50: adultas e maior ou igual a 50: senior.
-      
-  [x] Function getSchedule;<br />
-      A função é responsável por disponibilizar as informações de horário dos animais em uma consulta para o usuário, que pode querer ter acesso ao cronograma da semana, de um dia ou de um animal em específico.
-      
-  [x] Function getOldestFromFirstSpecies;<br />
-      A função busca por informações do animal mais velho da primeira espécie gerenciada pela pessoa colaboradora do parâmetro.
- </p>
+  [x] Salvando formulário;<br />
+      Criar botão com o texto "Adicionar despesa" que salva no estado global as informações que foram escolhidas no formulário, assim realizado a soma total das despesas.
 
 ---
 ## Requisitos que serão realizados :coin:
 
 <p>
-- [ ] Iniciar function getEmployeesCoverage;<br />
-        A mesma deve trazer o nome dos colaboradores e informar qual animal deve ser cuidado pelo mesmo, com suas informações principais
+- [ ] Criar um botão para deletar despesas;<br />
+        A mesma deve deletar da lista a despesa desejada, removendo a mesma do estado global, atualizando assim o valor total de despesas.
 
-- [ ] Iniciar function getAnimalMap;<br />
-        Tem a funcionalidade de realizar o mapeamento geográfico das espécies e seus animais, podendo ainda filtrá-los por ordem alfabética e sexo.
+- [ ] Criar um botão para editar despesas;<br />
+       A mesma deve editar a despesa, mantendo a ordem da despesa na tabela, caso a edição seja de valor o mesmo deve ser alterado no total de despesas.
         
 - [ ] Escrever testes;<br />
         Os testes que utilizavamos para este projeto eram da Trybe e foram deletados, desta maneira estarei realizando novos testes.
