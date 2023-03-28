@@ -33,13 +33,13 @@ Os arquivos com códigos feitos por mim são dos seguintes:
 - Neste Projeto eu obtive 80% de aprovação realizado os seguintes requisitos:
 <p>  
   [x] Pagina Inicial;<br />
-      Pagina inicial para que a pessoa usuária insira seu email e senha, um botão com texto entrar, sempre verificando se o email e senha são validos. Esta pagina deve estar em "/".
+      Pagina inicial para que a pessoa usuária insira seu email e senha, um botão com texto entrar, sempre verificando se o email e senha são validos. Esta pagina deve estar na rota "/".
       
   [x] Pagina Carteira;<br />
       A rota da pagina deve ser "/carteira"
       
   [x] Criar um header;<br />
-      Deve conter o email da pessoa usuária, um elemento com a despesa total da lista de gastos e um elemento câmbio com a moeda que esta sendo utilizada.
+      Deve conter o email da pessoa usuária, um elemento com a despesa total da lista de gastos, e um elemento câmbio com a moeda que esta sendo utilizada.
       
   [x] API de câmbio;<br />
       Armazenar no estado global as siglas das moedas que vêm da API, aplicando a mesma em uma array.
@@ -48,7 +48,7 @@ Os arquivos com códigos feitos por mim são dos seguintes:
       Para adicionar as despesas com as seguintes características: Valor da despesa, descrição da despesa, em qual moeda será registrada a despesa, método de pagamento, e motivo da despesa (ex: alimentação, lazer e etc).
       
   [x] Salvando formulário;<br />
-      Criar botão com o texto "Adicionar despesa" que salva no estado global as informações que foram escolhidas no formulário, assim realizado a soma total das despesas.
+      Criar botão com o texto "Adicionar despesa" que salva no estado global as informações que foram escolhidas no formulário, e as listando no corpo da pagina, assim realizado a soma total das despesas.
 
 ---
 ## Requisitos que serão realizados :coin:
@@ -58,7 +58,7 @@ Os arquivos com códigos feitos por mim são dos seguintes:
         A mesma deve deletar da lista a despesa desejada, removendo a mesma do estado global, atualizando assim o valor total de despesas.
 
 - [ ] Criar um botão para editar despesas;<br />
-       A mesma deve editar a despesa, mantendo a ordem da despesa na tabela, caso a edição seja de valor o mesmo deve ser alterado no total de despesas.
+       A mesma deve editar a despesa, mantendo a ordem da despesa na tabela, caso a edição seja de valor, o mesmo deve ser alterado no total de despesas.
         
 - [ ] Escrever testes;<br />
         Os testes que utilizavamos para este projeto eram da Trybe e foram deletados, desta maneira estarei realizando novos testes.
